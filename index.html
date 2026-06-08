@@ -138,6 +138,18 @@ padding:20px;
 text-align:center;
 color:#aaa;
 }
+.cart-bar{
+position:sticky;
+top:0;
+background:#d60000;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+z-index:999;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
 .category-btn{
 text-align:center;
 padding:15px;
@@ -163,6 +175,9 @@ background:linear-gradient(135deg,#ffffff,#f8f8f8);
 <body>
 
 <div class="header">
+<div id="cartTotal" class="cart-bar">
+🛒 Cart Total: ₹0
+</div>
 
 <!-- Logo -->
 <img src="https://raw.githubusercontent.com/thevirelhub-creator/GFC-RESTURANT-/323e6bddc943501ba9280a2e421a90498f286690/file_000000001a747208ad0119a37f52e438.png" class="logo">
@@ -379,11 +394,6 @@ Fresh Food • Great Taste • Fast Service
 
 </div>
 
-</div>
-<div id="cartTotal"
-style="text-align:center;font-size:24px;font-weight:bold;padding:20px;">
-🛒 Cart Total: ₹0
-  </div>
 <!-- FOOTER -->
 
 <div class="footer">
