@@ -1,65 +1,59 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GFC Restaurant</title>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GFC Restaurant</title><style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
 body{
-background:#0d0d0d;
-font-family:Arial,sans-serif;
-color:white;
+background:#ffffff;
+color:#222;
 }
 
 .header{
-background:linear-gradient(45deg,#d50000,#ff3d00);
-padding:40px 20px;
+background:#d50000;
+color:white;
 text-align:center;
+padding:30px 15px;
 }
 
 .header h1{
 font-size:42px;
-font-weight:bold;
 }
 
 .header p{
-margin-top:10px;
+margin-top:8px;
 font-size:18px;
 }
 
-.banner{
-padding:20px;
-text-align:center;
-}
-
-.banner img{
-width:95%;
-border-radius:20px;
-box-shadow:0 0 25px red;
-}
-
 .category{
-padding:15px;
+margin:15px;
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
 .category h2{
 background:#d50000;
-padding:10px;
-border-radius:10px;
-margin-bottom:10px;
+color:white;
+padding:12px;
 }
 
 .item{
-background:#1c1c1c;
-padding:15px;
-margin:8px 0;
-border-radius:12px;
 display:flex;
 justify-content:space-between;
-font-size:18px;
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.item:last-child{
+border-bottom:none;
 }
 
 .whatsapp{
@@ -67,34 +61,69 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
 color:white;
+padding:15px 20px;
+border-radius:30px;
+text-decoration:none;
 font-weight:bold;
 }
-</style>
-</head>
-
-<body>
-
-<div class="header">
+</style></head><body><div class="header">
 <h1>🍔 GFC RESTAURANT</h1>
 <p>Good Food • Good Mood</p>
-<p>📍 Sipah Ibrahimabad, Mau, UP</p>
+<p>📍 Sipah Ibrahimabad, Mau, Uttar Pradesh</p>
 <p>📞 9956985622</p>
-</div>
-
-<div class="category">
-<h2>🍔 BURGER</h2>
+</div><div class="category">
+<h2>🍔 Burger</h2>
 <div class="item"><span>Paneer Burger</span><span>₹50</span></div>
 <div class="item"><span>Veg Burger</span><span>₹40</span></div>
 <div class="item"><span>Cheese Burger</span><span>₹60</span></div>
-</div>
-
-<a class="whatsapp" href="https://wa.me/919956985622">
+<div class="item"><span>Veg Chowmein Burger</span><span>₹60</span></div>
+<div class="item"><span>Double Cheese Burger</span><span>₹90</span></div>
+</div><div class="category">
+<h2>🍜 Chowmein</h2>
+<div class="item"><span>Veg Chowmein</span><span>₹20</span></div>
+<div class="item"><span>Paneer Chowmein</span><span>₹70</span></div>
+<div class="item"><span>Hakka Noodles</span><span>₹80</span></div>
+<div class="item"><span>Ginger Noodles</span><span>₹80</span></div>
+</div><div class="category">
+<h2>🍚 Rice</h2>
+<div class="item"><span>Veg Fried Rice</span><span>₹60</span></div>
+<div class="item"><span>Paneer Fried Rice</span><span>₹80</span></div>
+<div class="item"><span>Paneer Pakoda</span><span>₹100</span></div>
+<div class="item"><span>Pyaz Pakoda</span><span>₹80</span></div>
+<div class="item"><span>Mix Veg Paneer Pakoda</span><span>₹120</span></div>
+</div><div class="category">
+<h2>🍕 Pizza</h2>
+<div class="item"><span>Paneer Pizza</span><span>₹160-280</span></div>
+<div class="item"><span>Cheese Pizza</span><span>₹180-300</span></div>
+<div class="item"><span>Tomato Pizza</span><span>₹140-220</span></div>
+<div class="item"><span>Mix Veg Paneer Pizza</span><span>₹200-340</span></div>
+</div><div class="category">
+<h2>🌮 Dosa & Snacks</h2>
+<div class="item"><span>Special Dosa</span><span>₹120</span></div>
+<div class="item"><span>Masala Dosa</span><span>₹60</span></div>
+<div class="item"><span>Paneer Dosa</span><span>₹80</span></div>
+<div class="item"><span>Paper Dosa</span><span>₹40</span></div>
+<div class="item"><span>Onion Dosa</span><span>₹70</span></div>
+<div class="item"><span>Paneer Chilli</span><span>₹100</span></div>
+<div class="item"><span>Roasted Paneer Chilli</span><span>₹150</span></div>
+<div class="item"><span>Special Paneer 65</span><span>₹120</span></div>
+<div class="item"><span>Veg Manchurian</span><span>₹60</span></div>
+<div class="item"><span>French Fries</span><span>₹60</span></div>
+<div class="item"><span>Paneer Tikka</span><span>₹150</span></div>
+</div><div class="category">
+<h2>🥤 Beverages</h2>
+<div class="item"><span>Banana Shake</span><span>₹60</span></div>
+<div class="item"><span>Choco Shake</span><span>₹90</span></div>
+<div class="item"><span>Butter Coffee</span><span>₹20</span></div>
+<div class="item"><span>Vegetarian Soup</span><span>₹60</span></div>
+</div><div class="category">
+<h2>🍛 Indian Dish</h2>
+<div class="item"><span>Matar Paneer</span><span>₹160</span></div>
+<div class="item"><span>Shahi Paneer</span><span>₹180</span></div>
+<div class="item"><span>Paneer Butter Masala</span><span>₹220</span></div>
+<div class="item"><span>Paneer Do Pyaza</span><span>₹200</span></div>
+</div><a class="whatsapp" href="https://wa.me/919956985622">
 Order Now
-</a>
-
-</body>
+</a></body>
 </html>
