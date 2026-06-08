@@ -1,141 +1,235 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GFC Restaurant</title><style>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<title>GFC Restaurant</title>
+
+<style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
 background:#f5f5f5;
 }
-}
-
-  .logo{
-    width:180px;
-    height:auto;
-    display:block;
-    margin:0 auto 20px;
-}
 
 .header{
-    background:#E4002B;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
+background:linear-gradient(135deg,#d50000,#ff1e1e);
+color:white;
+text-align:center;
+padding:50px 20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
+
+.logo{
+width:110px;
+height:110px;
+background:white;
+border-radius:50%;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:40px;
+color:#d50000;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 .header h1{
 font-size:42px;
+margin-top:15px;
 }
 
-.header p{
-margin-top:8px;
+.tagline{
 font-size:18px;
+margin-top:10px;
+opacity:.95;
 }
 
-.category{
-margin:15px;
+.info{
+margin-top:20px;
+font-size:17px;
+line-height:1.8;
+}
+
+.container{
+padding:20px;
+max-width:900px;
+margin:auto;
+}
+
+.menu-card{
 background:white;
-border-radius:15px;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 2px 10px rgba(0,0,0,0.15);
+margin-bottom:25px;
+box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
 
-.category h2{
+.menu-title{
 background:#d50000;
 color:white;
-padding:12px;
+padding:18px;
+font-size:28px;
+font-weight:bold;
 }
 
 .item{
 display:flex;
 justify-content:space-between;
-padding:12px;
+padding:16px 20px;
 border-bottom:1px solid #eee;
+font-size:18px;
 }
 
 .item:last-child{
-border-bottom:none;
+border:none;
+}
+
+.price{
+font-weight:bold;
+color:#d50000;
+}
+
+.btns{
+padding:30px 20px;
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+padding:14px 28px;
+margin:8px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+}
+
+.call{
+background:#28a745;
 }
 
 .whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
 background:#25D366;
-color:white;
-padding:15px 20px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
 }
-</style></head><body><div <div class="header">
-<img src="logo.png" class="logo" alt="GFC Logo">
+
+.footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="logo">GFC</div>
+
 <h1>GFC RESTAURANT</h1>
-<p>Fresh Taste • Fast Service</p>
-<p>📍 Sipah Ibrahimabad, Mau, Uttar Pradesh</p>
-<p>📞 9956985622</p>
-</div><div class="category">
-<h2>🍔 Burger</h2>
-<div class="item"><span>Paneer Burger</span><span>₹50</span></div>
-<div class="item"><span>Veg Burger</span><span>₹40</span></div>
-<div class="item"><span>Cheese Burger</span><span>₹60</span></div>
-<div class="item"><span>Veg Chowmein Burger</span><span>₹60</span></div>
-<div class="item"><span>Double Cheese Burger</span><span>₹90</span></div>
-</div><div class="category">
-<h2>🍜 Chowmein</h2>
-<div class="item"><span>Veg Chowmein</span><span>₹20</span></div>
-<div class="item"><span>Paneer Chowmein</span><span>₹70</span></div>
-<div class="item"><span>Hakka Noodles</span><span>₹80</span></div>
-<div class="item"><span>Ginger Noodles</span><span>₹80</span></div>
-</div><div class="category">
-<h2>🍚 Rice</h2>
-<div class="item"><span>Veg Fried Rice</span><span>₹60</span></div>
-<div class="item"><span>Paneer Fried Rice</span><span>₹80</span></div>
-<div class="item"><span>Paneer Pakoda</span><span>₹100</span></div>
-<div class="item"><span>Pyaz Pakoda</span><span>₹80</span></div>
-<div class="item"><span>Mix Veg Paneer Pakoda</span><span>₹120</span></div>
-</div><div class="category">
-<h2>🍕 Pizza</h2>
-<div class="item"><span>Paneer Pizza</span><span>₹160-280</span></div>
-<div class="item"><span>Cheese Pizza</span><span>₹180-300</span></div>
-<div class="item"><span>Tomato Pizza</span><span>₹140-220</span></div>
-<div class="item"><span>Mix Veg Paneer Pizza</span><span>₹200-340</span></div>
-</div><div class="category">
-<h2>🌮 Dosa & Snacks</h2>
-<div class="item"><span>Special Dosa</span><span>₹120</span></div>
-<div class="item"><span>Masala Dosa</span><span>₹60</span></div>
-<div class="item"><span>Paneer Dosa</span><span>₹80</span></div>
-<div class="item"><span>Paper Dosa</span><span>₹40</span></div>
-<div class="item"><span>Onion Dosa</span><span>₹70</span></div>
-<div class="item"><span>Paneer Chilli</span><span>₹100</span></div>
-<div class="item"><span>Roasted Paneer Chilli</span><span>₹150</span></div>
-<div class="item"><span>Special Paneer 65</span><span>₹120</span></div>
-<div class="item"><span>Veg Manchurian</span><span>₹60</span></div>
-<div class="item"><span>French Fries</span><span>₹60</span></div>
-<div class="item"><span>Paneer Tikka</span><span>₹150</span></div>
-</div><div class="category">
-<h2>🥤 Beverages</h2>
-<div class="item"><span>Banana Shake</span><span>₹60</span></div>
-<div class="item"><span>Choco Shake</span><span>₹90</span></div>
-<div class="item"><span>Butter Coffee</span><span>₹20</span></div>
-<div class="item"><span>Vegetarian Soup</span><span>₹60</span></div>
-</div><div class="category">
-<h2>🍛 Indian Dish</h2>
-<div class="item"><span>Matar Paneer</span><span>₹160</span></div>
-<div class="item"><span>Shahi Paneer</span><span>₹180</span></div>
-<div class="item"><span>Paneer Butter Masala</span><span>₹220</span></div>
-<div class="item"><span>Paneer Do Pyaza</span><span>₹200</span></div>
-</div><a class="whatsapp" href="https://wa.me/919956985622">
-<a class="order-btn"
-href="https://wa.me/919956985622">
-Order Now
-</a></body>
+
+<div class="tagline">
+🍔 Fresh Taste • Fast Service
+</div>
+
+<div class="info">
+📍 Sipah Ibrahimabad, Mau, Uttar Pradesh<br>
+📞 9956985622
+</div>
+
+</div>
+
+<div class="container">
+
+<div class="menu-card">
+<div class="menu-title">🍔 Burger</div>
+
+<div class="item">
+<span>Paneer Burger</span>
+<span class="price">₹50</span>
+</div>
+
+<div class="item">
+<span>Veg Burger</span>
+<span class="price">₹40</span>
+</div>
+
+<div class="item">
+<span>Cheese Burger</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Veg Chowmein Burger</span>
+<span class="price">₹60</span>
+</div>
+
+<div class="item">
+<span>Double Cheese Burger</span>
+<span class="price">₹90</span>
+</div>
+</div>
+
+<div class="menu-card">
+<div class="menu-title">🍜 Chowmein</div>
+
+<div class="item">
+<span>Half Plate</span>
+<span class="price">₹40</span>
+</div>
+
+<div class="item">
+<span>Full Plate</span>
+<span class="price">₹70</span>
+</div>
+</div>
+
+<div class="menu-card">
+<div class="menu-title">🥤 Cold Drinks</div>
+
+<div class="item">
+<span>Coke</span>
+<span class="price">₹20</span>
+</div>
+
+<div class="item">
+<span>Sprite</span>
+<span class="price">₹20</span>
+</div>
+
+<div class="item">
+<span>Fanta</span>
+<span class="price">₹20</span>
+</div>
+</div>
+
+</div>
+
+<div class="btns">
+
+<a class="btn call" href="tel:9956985622">
+📞 Call Now
+</a>
+
+<a class="btn whatsapp" href="https://wa.me/919956985622">
+💬 WhatsApp Order
+</a>
+
+</div>
+
+<div class="footer">
+© 2026 GFC Restaurant | Fresh Taste • Fast Service
+</div>
+
+</body>
 </html>
