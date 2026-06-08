@@ -1,67 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GFC Restaurant</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-background:#111;
+background:#0d0d0d;
+font-family:Arial,sans-serif;
 color:white;
 }
 
-header{
-background:linear-gradient(45deg,#d60000,#ff6600);
+.header{
+background:linear-gradient(45deg,#d50000,#ff3d00);
+padding:40px 20px;
 text-align:center;
-padding:25px;
 }
 
-header h1{
-font-size:40px;
+.header h1{
+font-size:42px;
+font-weight:bold;
 }
 
-header p{
+.header p{
+margin-top:10px;
 font-size:18px;
 }
 
 .banner{
-text-align:center;
 padding:20px;
+text-align:center;
 }
 
 .banner img{
-width:90%;
-max-width:900px;
-border-radius:15px;
-box-shadow:0 0 20px rgba(255,255,255,0.2);
+width:95%;
+border-radius:20px;
+box-shadow:0 0 25px red;
 }
 
-.section{
-padding:20px;
-}
-
-.section h2{
-color:#ffcc00;
-margin-bottom:15px;
-font-size:30px;
-}
-
-.card{
-background:#222;
+.category{
 padding:15px;
-margin:10px 0;
+}
+
+.category h2{
+background:#d50000;
+padding:10px;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.item{
+background:#1c1c1c;
+padding:15px;
+margin:8px 0;
 border-radius:12px;
 display:flex;
 justify-content:space-between;
-font-size:20px;
+font-size:18px;
 }
 
 .whatsapp{
@@ -69,71 +67,34 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
-color:white;
 padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
-font-size:18px;
-}
-
-footer{
-text-align:center;
-padding:20px;
-background:#000;
-margin-top:20px;
+color:white;
+font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<div class="header">
 <h1>🍔 GFC RESTAURANT</h1>
 <p>Good Food • Good Mood</p>
+<p>📍 Sipah Ibrahimabad, Mau, UP</p>
 <p>📞 9956985622</p>
-</header>
-
-<div class="banner">
-<img src="menu.jpg" alt="GFC Menu">
 </div>
 
-<div class="section">
-<h2>Popular Items</h2>
-
-<div class="card">
-<span>Paneer Burger</span>
-<span>₹50</span>
-</div>
-
-<div class="card">
-<span>Veg Burger</span>
-<span>₹40</span>
-</div>
-
-<div class="card">
-<span>Paneer Pizza</span>
-<span>₹160 - ₹280</span>
-</div>
-
-<div class="card">
-<span>Masala Dosa</span>
-<span>₹60</span>
-</div>
-
-<div class="card">
-<span>Banana Shake</span>
-<span>₹60</span>
-</div>
-
+<div class="category">
+<h2>🍔 BURGER</h2>
+<div class="item"><span>Paneer Burger</span><span>₹50</span></div>
+<div class="item"><span>Veg Burger</span><span>₹40</span></div>
+<div class="item"><span>Cheese Burger</span><span>₹60</span></div>
 </div>
 
 <a class="whatsapp" href="https://wa.me/919956985622">
-Order on WhatsApp
+Order Now
 </a>
-
-<footer>
-© 2026 GFC Restaurant
-</footer>
 
 </body>
 </html>
