@@ -88,10 +88,23 @@ font-weight:bold;
 }
 
 .item{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    gap:10px;
+}
+
+.item span:first-child{
+    flex:1;
+    text-align:left;
+}
+
+.price{
+    width:70px;
+    text-align:center;
+    font-weight:bold;
+    color:#d60000;
 }
 
 .item button{
@@ -100,7 +113,7 @@ padding:20px;
     border: none;
     border-radius: 50%;
     background: transparent;
-    color: #d60000;
+    color: #000;
     font-size: 32px;
     font-weight: bold;
     cursor: pointer;
