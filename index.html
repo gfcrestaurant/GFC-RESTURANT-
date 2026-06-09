@@ -532,30 +532,32 @@ Fresh Food • Great Taste • Fast Service
 
 </div>
 <script>
+<script>
 let total = 0;
 let items = 0;
 
 function addToCart(price){
-total += price;
-items++;
+    total += price;
+    items++;
 
-document.getElementById("cartTotal").textContent =
-"🛒 " + items + " Items | ₹" + total;
+    document.getElementById("cartTotal").innerHTML =
+    "🛒 " + items + " Items | ₹" + total;
 }
 
 function removeFromCart(price){
-if(items > 0){
-items--;
-total -= price;
+    if(items > 0){
+        items--;
+        total -= price;
 
-if(total < 0){
-total = 0;
-}
+        if(total < 0){
+            total = 0;
+        }
 
-document.getElementById("cartTotal").textContent =
-"🛒 " + items + " Items | ₹" + total;
+        document.getElementById("cartTotal").innerHTML =
+        "🛒 " + items + " Items | ₹" + total;
+    }
 }
-}
+</script>
 </script>
 </body>
 </html>
