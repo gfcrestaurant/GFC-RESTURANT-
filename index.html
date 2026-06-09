@@ -574,7 +574,12 @@ GOOD FOOD • GOOD MOOD
 <a href="tel:9956985622" class="btn call">
 📞 Call Now
 </a>
-
+<a href="https://maps.app.goo.gl/JqUhy3CBRggNMVANA"
+target="_blank"
+class="btn call">
+📍 Get Directions
+</a>
+    
 <button onclick="payNow()" class="order-btn">
 💳 Pay ₹ <span id="payAmount">0</span>
 </button>
@@ -626,6 +631,34 @@ Fresh Food • Great Taste • Fast Service
 🏆 Top Rated Pure Veg Restaurant
 </p>
 
+    <div class="menu-card">
+<div class="menu-title">⭐ Give Your Rating</div>
+
+<div style="padding:20px;text-align:center;">
+
+<select id="rating" style="padding:10px;border-radius:10px;">
+<option>⭐⭐⭐⭐⭐ 5 Star</option>
+<option>⭐⭐⭐⭐ 4 Star</option>
+<option>⭐⭐⭐ 3 Star</option>
+<option>⭐⭐ 2 Star</option>
+<option>⭐ 1 Star</option>
+</select>
+
+<br><br>
+
+<textarea id="review"
+placeholder="Write your review..."
+style="width:90%;height:100px;padding:10px;border-radius:10px;">
+</textarea>
+
+<br><br>
+
+<button onclick="sendReview()" class="order-btn">
+⭐ Submit Review
+</button>
+
+</div>
+</div>
 </div>
 
 </div>
@@ -696,6 +729,26 @@ function placeOrder(){
 alert("💳 Pehle payment kare. 📸 Screenshot reception par dikhayen.");
 return;
     }
+function sendReview(){
+
+let rating =
+document.getElementById("rating").value;
+
+let review =
+document.getElementById("review").value;
+
+let msg =
+"⭐ GFC RESTAURANT REVIEW\n\n" +
+"Rating: " + rating + "\n\n" +
+"Review: " + review;
+
+window.open(
+"https://wa.me/919956985622?text=" +
+encodeURIComponent(msg),
+"_blank"
+);
+
+}
 
 let name =
 document.getElementById("custName").value;
