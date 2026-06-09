@@ -186,6 +186,22 @@ font-weight:600;
 #burger,#rice,#chowmein,#pizza,#dosa,#beverages,#indian{
 background:linear-gradient(135deg,#ffffff,#f8f8f8);
 }
+
+.order-btn{
+display:block;
+width:250px;
+margin:15px auto;
+padding:15px;
+background:#25D366;
+color:white;
+border:none;
+text-align:center;
+border-radius:30px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
 </style>
 </head>
 
@@ -581,6 +597,24 @@ Fresh Food • Great Taste • Fast Service
 
 </div>
 
+<div class="menu-card">
+<div class="menu-title">📝 Customer Details</div>
+
+<input type="text" id="custName" placeholder="Your Name"
+style="width:90%;padding:12px;margin:8px;border-radius:10px;">
+
+<input type="tel" id="custMobile" placeholder="Mobile Number"
+style="width:90%;padding:12px;margin:8px;border-radius:10px;">
+
+<input type="text" id="custAddress" placeholder="Delivery Address"
+style="width:90%;padding:12px;margin:8px;border-radius:10px;">
+
+<button onclick="placeOrder()" class="order-btn">
+📱 Order on WhatsApp
+</button>
+
+</div>
+
 <!-- FOOTER -->
 
 <div class="footer">
@@ -631,6 +665,34 @@ function removeFromCart(price){
         document.getElementById("cartTotal").innerHTML =
         "🛒 " + items + " Items | ₹" + total;
     }
+}
+function placeOrder(){
+
+let name =
+document.getElementById("custName").value;
+
+let mobile =
+document.getElementById("custMobile").value;
+
+let address =
+document.getElementById("custAddress").value;
+
+let msg =
+"🍔 GFC RESTAURANT ORDER\n\n" +
+
+"👤 Name: " + name + "\n" +
+"📞 Mobile: " + mobile + "\n" +
+"📍 Address: " + address + "\n\n" +
+
+"🛒 Total Items: " + items + "\n" +
+"💰 Total Bill: ₹" + total;
+
+window.open(
+"https://wa.me/919569607032?text=" +
+encodeURIComponent(msg),
+"_blank"
+);
+
 }
 </script>
 </body>
