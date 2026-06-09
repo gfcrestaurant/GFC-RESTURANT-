@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+x<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -572,6 +572,10 @@ GOOD FOOD • GOOD MOOD
 📞 Call Now
 </a>
 
+<button onclick="payNow()" class="order-btn">
+💳 Pay ₹ <span id="payAmount">0</span>
+</button>
+    
 <a href="https://wa.me/919956985622" class="btn whatsapp">
 💬 WhatsApp Order
 </a>
@@ -674,10 +678,16 @@ function removeFromCart(price){
 
         document.getElementById("cartTotal").innerHTML =
         "🛒 " + items + " Items | ₹" + total;
+        document.getElementById("payAmount").innerText = total;
     }
 }
 function placeOrder(){
 alert("Button Working");
+
+function payNow(){
+window.location.href =
+"upi://pay?pa=govindgupta822-3@okhdfcbank&pn=GFC Restaurant&am="+total+"&cu=INR";
+}
 
 let name =
 document.getElementById("custName").value;
