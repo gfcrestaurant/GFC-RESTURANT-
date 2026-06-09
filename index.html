@@ -707,14 +707,14 @@ let now = new Date();
 let orderDate = now.toLocaleDateString('en-IN');
 let orderTime = now.toLocaleTimeString('en-IN');
 let msg =
-"🍔 GFC RESTAURANT ORDER\n\n" +
+"━━━━━━━━━━━━━━\n" +
+"🍔 *GFC RESTAURANT ORDER*\n" +
+"━━━━━━━━━━━━━━\n\n" +
 "📅 Date: " + orderDate + "\n" +
 "⏰ Time: " + orderTime + "\n\n" +
-
 "👤 Name: " + name + "\n" +
 "📞 Mobile: " + mobile + "\n" +
 "📍 Address: " + address + "\n\n" +
-    
 "📋 Items:\n" + orderItems.join("\n") + "\n\n" +
 "🛒 Total Items: " + items + "\n" +
 "💰 Total Bill: ₹" + total;
