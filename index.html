@@ -724,6 +724,7 @@ document.getElementById("custMobile").value;
 let address =
 document.getElementById("custAddress").value;
 
+let orderId = "GFC" + Date.now(); 
 let now = new Date();
 let orderDate = now.toLocaleDateString('en-IN');
 let orderTime = now.toLocaleTimeString('en-IN');
@@ -731,6 +732,7 @@ let msg =
 "━━━━━━━━━━━━━━\n" +
 "🍔 *GFC RESTAURANT ORDER*\n" +
 "━━━━━━━━━━━━━━\n\n" +
+"🆔 Order ID: " + orderId + "\n\n" +
 "📅 Date: " + orderDate + "\n" +
 "⏰ Time: " + orderTime + "\n\n" +
 "👤 Name: " + name + "\n" +
@@ -741,7 +743,7 @@ let msg =
 "💰 Total Bill: ₹" + total;
 
 saveOrder({
-  orderId: "GFC" + Date.now(),
+  orderId: orderId,
   customerName: name,
   mobile: mobile,
   address: address,
