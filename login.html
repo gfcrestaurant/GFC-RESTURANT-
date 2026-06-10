@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GFC Admin Login</title>
+</head>
+<body>
+
+<h2>GFC Admin Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+<br><br>
+
+<input type="password" id="password" placeholder="Password">
+<br><br>
+
+<button onclick="login()">Login</button>
+
+<script>
+function login(){
+
+let user = document.getElementById("username").value;
+let pass = document.getElementById("password").value;
+
+if(user==="GFC99569" && pass==="GFC85622"){
+localStorage.setItem("adminLoggedIn","true");
+window.location.href="admin.html";
+}else{
+alert("Wrong Username or Password");
+}
+
+}
+</script>
+
+</body>
+</html>
