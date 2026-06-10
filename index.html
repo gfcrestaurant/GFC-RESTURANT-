@@ -829,5 +829,27 @@ document.getElementById("trackResult").innerHTML =
 
 }
 </script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getMessaging, getToken } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-messaging.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyANoH7F0DacQhEkSkH57rykzHj8Ma93r74",
+  authDomain: "gfc-restaurant-51bb8.firebaseapp.com",
+  projectId: "gfc-restaurant-51bb8",
+  storageBucket: "gfc-restaurant-51bb8.firebasestorage.app",
+  messagingSenderId: "59057512480",
+  appId: "1:59057512480:web:45d9dcd26a36048cd99c45"
+};
+
+const app = initializeApp(firebaseConfig);
+const messaging = getMessaging(app);
+
+Notification.requestPermission().then((permission) => {
+  if (permission === "granted") {
+    console.log("Notification Permission Granted");
+  }
+});
+</script>
 </body>
 </html>
