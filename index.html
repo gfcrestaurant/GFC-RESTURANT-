@@ -754,7 +754,11 @@ saveOrder({
   orderTime: orderTime,
   status: "Pending"
 });
-    
+alert(
+"✅ Order Confirmed!\n\n" +
+"🆔 Order ID: " + orderId + "\n\n" +
+"🍔 Thank you for ordering from GFC Restaurant"
+);
 window.open(
 "https://wa.me/919956985622?text=" +
 encodeURIComponent(msg),
