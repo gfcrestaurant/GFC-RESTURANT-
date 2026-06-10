@@ -312,20 +312,6 @@ console.log(error);
 
 }
 
-}
-if(confirm("Delete this order?")){
-
-await deleteDoc(
-doc(db,"orders",orderId)
-);
-
-alert("Order Deleted Successfully");
-
-location.reload();
-
-}
-
-}
 let firstLoad = true;
 
 onSnapshot(collection(db,"orders"), (snapshot) => {
