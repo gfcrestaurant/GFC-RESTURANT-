@@ -3,24 +3,6 @@
 <head>
 <title>GFC Admin Panel</title>
 <style>
-body{
-font-family:Arial;
-padding:20px;
-background:#f5f5f5;
-}
-
-h1{
-text-align:center;
-color:#d60000;
-}
-
-.order{
-background:white;
-padding:15px;
-margin:15px 0;
-border-radius:10px;
-box-shadow:0 2px 5px rgba(0,0,0,0.2);
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -94,6 +76,15 @@ button{
 button:hover{
   transform:translateY(-2px);
   transition:0.3s;
+}
+
+.order-card p,
+.order-card h3{
+  color:white;
+}
+
+.order-card b{
+  color:#ffd54f;
 }
   
 </style>
@@ -176,8 +167,7 @@ deliveredOrders++;
 totalSales += Number(o.totalBill || 0);
 
 html += `
-<div class="order">
-
+<div class="order-card">
 <h3>🆔 Order</h3>
 
 <p><b>Order ID:</b> ${o.orderId || "N/A"}</p>
