@@ -304,15 +304,7 @@ onSnapshot(collection(db,"orders"),()=>{
 
 if(!firstLoad){
 
-const audio = new Audio(
-"https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg"
-);
-
-audio.play();
-
-alert("🔔 New Order Received!");
-
-location.reload();
+ console.log("Orders Updated");
 
 }
 
