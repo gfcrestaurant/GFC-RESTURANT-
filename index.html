@@ -75,16 +75,18 @@ min-height:auto;
 }
 
 .menu-card{
-background:#fff;
-color:#000;
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+color:white;
 border-radius:20px;
 overflow:hidden;
 margin-bottom:25px;
-box-shadow:0 5px 20px rgba(0,0,0,.4);
+border:1px solid rgba(255,255,255,0.2);
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 height:auto !important;
 min-height:auto !important;
-    }
-
+}
 .menu-title{
 background:#c40000;
 color:white;
@@ -95,6 +97,7 @@ font-weight:bold;
 
 .item{
     display:flex;
+    color:white;
     justify-content:space-between;
     align-items:center;
     padding:8px 15px;
@@ -108,6 +111,8 @@ font-weight:bold;
 
 .price{
     width:70px;
+    color:#ffd700;
+font-weight:bold;
     text-align:center;
     font-weight:bold;
     color:#d60000;
