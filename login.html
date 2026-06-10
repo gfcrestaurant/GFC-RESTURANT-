@@ -2,33 +2,141 @@
 <html>
 <head>
 <title>GFC Admin Login</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+padding:20px;
+}
+
+.login-box{
+width:100%;
+max-width:380px;
+padding:30px;
+border-radius:25px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.15);
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+text-align:center;
+color:white;
+}
+
+.logo{
+font-size:60px;
+margin-bottom:10px;
+}
+
+h1{
+font-size:32px;
+margin-bottom:10px;
+}
+
+p{
+color:#cbd5e1;
+margin-bottom:25px;
+}
+
+input{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:12px;
+background:rgba(255,255,255,0.12);
+color:white;
+font-size:16px;
+outline:none;
+}
+
+input::placeholder{
+color:#cbd5e1;
+}
+
+button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#ff3b30,#ff6b35);
+color:white;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+}
+
+button:hover{
+transform:translateY(-2px);
+transition:.3s;
+}
+
+.footer{
+margin-top:20px;
+font-size:13px;
+color:#94a3b8;
+}
+
+</style>
 </head>
+
 <body>
 
-<h2>GFC Admin Login</h2>
+<div class="login-box">
+
+<div class="logo">🍔</div>
+
+<h1>GFC Admin Login</h1>
+
+<p>Welcome Back</p>
 
 <input type="text" id="username" placeholder="Username">
-<br><br>
 
 <input type="password" id="password" placeholder="Password">
-<br><br>
 
-<button onclick="login()">Login</button>
+<button onclick="login()">LOGIN</button>
+
+<div class="footer">
+Secure Admin Access
+</div>
+
+</div>
 
 <script>
+
 function login(){
 
-let user = document.getElementById("username").value;
-let pass = document.getElementById("password").value;
+let user=document.getElementById("username").value;
+let pass=document.getElementById("password").value;
 
 if(user==="GFC99569" && pass==="GFC85622"){
+
 localStorage.setItem("adminLoggedIn","true");
+
 window.location.href="admin.html";
+
 }else{
+
 alert("Wrong Username or Password");
+
 }
 
 }
+
 </script>
 
 </body>
