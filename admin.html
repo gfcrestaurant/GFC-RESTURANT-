@@ -21,6 +21,81 @@ margin:15px 0;
 border-radius:10px;
 box-shadow:0 2px 5px rgba(0,0,0,0.2);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
+  color:white;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.card,
+.order-card{
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:15px;
+  padding:15px;
+  margin-bottom:15px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+.stat-card{
+  border-radius:15px;
+  padding:20px;
+  color:white;
+  font-weight:600;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+.blue{
+  background:linear-gradient(135deg,#3b82f6,#2563eb);
+}
+
+.orange{
+  background:linear-gradient(135deg,#f59e0b,#d97706);
+}
+
+.green{
+  background:linear-gradient(135deg,#22c55e,#16a34a);
+}
+
+.red{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+button{
+  background:#ff4d4d;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  transition:0.3s;
+}
+  
 </style>
 </head>
 
