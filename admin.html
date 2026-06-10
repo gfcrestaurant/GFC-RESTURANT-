@@ -36,9 +36,10 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebas
 import {
 getFirestore,
 collection,
-getDocs
+getDocs,
+updateDoc,
+doc
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
-
 const firebaseConfig = {
 apiKey: "AIzaSyAnoH7FODacQhEkSkH57rykzHj8Ma93r74",
 authDomain: "gfc-restaurant-51bb8.firebaseapp.com",
@@ -61,20 +62,50 @@ let o = doc.data();
 
 html += `
 <div class="order">
+
 <h3>🆔 Order</h3>
 
 <p><b>Name:</b> ${o.customerName}</p>
 <p><b>Mobile:</b> ${o.mobile}</p>
 <p><b>Address:</b> ${o.address}</p>
 <p><b>Total:</b> ₹${o.totalBill}</p>
-<p><b>Status:</b> ${o.status}</p>
+
+<p><b>Status:</b>
+<span id="status-${doc.id}">
+${o.status}
+</span>
+</p>
+
+<button onclick="changeStatus('${doc.id}','Preparing')">
+🟠 Preparing
+</button>
+
+<button onclick="changeStatus('${doc.id}','Delivered')">
+🟢 Delivered
+</button>
 
 </div>
+`;
 `;
 
 });
 
 document.getElementById("orders").innerHTML = html;
+window.changeStatus = async function(orderId,newStatus){
+
+await updateDoc(
+doc(db,"orders",orderId),
+{
+status:newStatus
+}
+);
+
+document.getElementById(
+"status-"+orderId
+).innerText = newStatus;
+
+alert("Status Updated Successfully");
+}
 
 </script>
 
