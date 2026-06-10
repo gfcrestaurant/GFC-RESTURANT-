@@ -1,181 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>GFC Admin Panel</title>
+<title>GFC Restaurant Admin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-  min-height:100vh;
-  background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-  color:white;
-  padding:20px;
+min-height:100vh;
+padding:20px;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+linear-gradient(135deg,#ff3b30,#ff9800,#1e293b);
+color:white;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
 }
 
 h1{
-  text-align:center;
-  font-size:32px;
-  font-weight:700;
-  margin-bottom:20px;
+font-size:38px;
+text-shadow:0 0 20px #ff9800;
 }
 
-.card,
-.order-card{
-  background:rgba(255,255,255,0.12);
-  backdrop-filter:blur(15px);
-  -webkit-backdrop-filter:blur(15px);
-  border:1px solid rgba(255,255,255,0.2);
-  border-radius:15px;
-  padding:15px;
-  margin-bottom:15px;
-  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+.logout{
+background:linear-gradient(135deg,#ff3b30,#ff9800);
+border:none;
+padding:12px 18px;
+border-radius:12px;
+color:white;
+font-weight:700;
+cursor:pointer;
 }
 
-.stat-card{
-  border-radius:15px;
-  padding:20px;
-  color:white;
-  font-weight:600;
-  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+margin-bottom:20px;
+}
+
+.card{
+padding:20px;
+border-radius:20px;
+color:white;
+font-weight:700;
 }
 
 .blue{
-  background:linear-gradient(135deg,#3b82f6,#2563eb);
+background:linear-gradient(135deg,#00c6ff,#0072ff);
 }
 
 .orange{
-  background:linear-gradient(135deg,#f59e0b,#d97706);
+background:linear-gradient(135deg,#ff9800,#ff5722);
 }
 
 .green{
-  background:linear-gradient(135deg,#22c55e,#16a34a);
+background:linear-gradient(135deg,#00c853,#64dd17);
 }
 
 .red{
-  background:linear-gradient(135deg,#ef4444,#dc2626);
+background:linear-gradient(135deg,#ff1744,#d50000);
+}
+
+.order-card{
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(15px);
+border-left:5px solid #ff9800;
+padding:20px;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.order-card p{
+font-size:18px;
+line-height:1.8;
+}
+
+.order-card b{
+font-size:20px;
+color:white;
 }
 
 button{
-  background:#ff4d4d;
-  color:white;
-  border:none;
-  padding:10px 20px;
-  border-radius:10px;
-  cursor:pointer;
-  font-weight:600;
+background:linear-gradient(135deg,#ff3b30,#ff9800);
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:12px;
+font-weight:700;
+margin:5px;
+cursor:pointer;
 }
 
-button:hover{
-  transform:translateY(-2px);
-  transition:0.3s;
-}
-
-.order-card p,
-.order-card h3{
-  color:white;
-}
-
-.order-card b{
-  color:#00e5ff;
-  font-size:20px;
-  font-weight:700;
-}
-
-.order-card p{
-  font-size:18px;
-  color:#ffffff;
-  line-height:1.8;
-}
-
-.order-card h3{
-  font-size:24px;
-  color:#ffffff;
-}
-
-.order{
-  background:rgba(255,255,255,0.12) !important;
-  backdrop-filter:blur(15px);
-  -webkit-backdrop-filter:blur(15px);
-  border:1px solid rgba(255,255,255,0.2);
-  border-radius:15px;
-  padding:15px;
-  margin-bottom:15px;
-  box-shadow:0 8px 32px rgba(0,0,0,0.3);
-}
-
-.order p,
-.order h3{
-  color:white !important;
-}
-.order-card{
-  font-size:18px;
-}
-.order b{
-  color:#ffd54f;
-}
-.order{
-  background:rgba(255,255,255,0.15) !important;
-  color:#ffffff !important;
-}
-
-.order p,
-.order h3,
-.order span{
-  color:#ffffff !important;
-}
-.order-card b{
-  color:#ffffff;
-  font-size:20px;
-  font-weight:700;
-}
-
-.order-card p{
-  font-size:18px;
-  color:#ffffff;
-  line-height:1.8;
-}
-
-.order-card h3{
-  font-size:24px;
-  color:#ffffff;
-  font-weight:700;
-}
-  
 </style>
 </head>
-
 <body>
 
-<h1>🍔 GFC Restaurant Orders</h1>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin:20px 0;">
-  
-  <div style="background:#2196f3;color:white;padding:15px;border-radius:10px;flex:1;">
-    <h3>Total Orders</h3>
-    <h2 id="totalOrders">0</h2>
-  </div>
+<div class="header">
 
-  <div style="background:#ff9800;color:white;padding:15px;border-radius:10px;flex:1;">
-    <h3>Pending</h3>
-    <h2 id="pendingOrders">0</h2>
-  </div>
+<h1>🍔 GFC Restaurant Admin</h1>
 
-  <div style="background:#4caf50;color:white;padding:15px;border-radius:10px;flex:1;">
-    <h3>Delivered</h3>
-    <h2 id="deliveredOrders">0</h2>
-  </div>
+<button class="logout" onclick="logout()">
+🚪 Logout
+</button>
 
-  <div style="background:#d60000;color:white;padding:15px;border-radius:10px;flex:1;">
-    <h3>Total Sales</h3>
-    <h2 id="totalSales">₹0</h2>
-  </div>
+</div>
+
+<div class="stats">
+
+<div class="card blue">
+<h3>Total Orders</h3>
+<h2 id="totalOrders">0</h2>
+</div>
+
+<div class="card orange">
+<h3>Pending</h3>
+<h2 id="pendingOrders">0</h2>
+</div>
+
+<div class="card green">
+<h3>Delivered</h3>
+<h2 id="deliveredOrders">0</h2>
+</div>
+
+<div class="card red">
+<h3>Total Sales</h3>
+<h2 id="totalSales">₹0</h2>
+</div>
 
 </div>
 
@@ -184,30 +148,40 @@ button:hover{
 <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
 import {
- getFirestore,
- collection,
- getDocs,
- updateDoc,
- deleteDoc,
- doc,
- onSnapshot
+getFirestore,
+collection,
+getDocs,
+updateDoc,
+deleteDoc,
+doc,
+onSnapshot
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
 const firebaseConfig = {
+
 apiKey: "AIzaSyAnoH7FODacQhEkSkH57rykzHj8Ma93r74",
 authDomain: "gfc-restaurant-51bb8.firebaseapp.com",
-projectId: "gfc-restaurant-51bb8",
-storageBucket: "gfc-restaurant-51bb8.firebasestorage.app",
-messagingSenderId: "59057512480",
 appId: "1:59057512480:web:45d9dcd26a36048cd99c45"
+storageBucket: "gfc-restaurant-51bb8.firebasestorage.app",
+
+messagingSenderId: "59057512480",
+
+appId: "YOUR_APP_ID"
+
 };
 
 const app = initializeApp(firebaseConfig);
+
 const db = getFirestore(app);
 
-const querySnapshot = await getDocs(collection(db,"orders"));
+const querySnapshot = await getDocs(
+collection(db,"orders")
+);
 
 let html = "";
+
 let totalOrders = 0;
 let pendingOrders = 0;
 let deliveredOrders = 0;
@@ -216,36 +190,43 @@ let totalSales = 0;
 querySnapshot.forEach((doc)=>{
 
 let o = doc.data();
+
 totalOrders++;
 
-if(o.status=="Pending"){
+if(o.status==="Pending"){
 pendingOrders++;
 }
 
-if(o.status=="Delivered"){
+if(o.status==="Delivered"){
 deliveredOrders++;
 }
 
 totalSales += Number(o.totalBill || 0);
 
 html += `
+
 <div class="order-card">
 
-<h3>🆔 Order</h3>
+<h3>🆔 Order #${o.orderId || "N/A"}</h3>
 
-<p><b>Order ID:</b> ${o.orderId || "N/A"}</p>
 <p><b>Name:</b> ${o.customerName || "N/A"}</p>
+
 <p><b>Mobile:</b> ${o.mobile || "N/A"}</p>
+
 <p><b>Address:</b> ${o.address || "N/A"}</p>
+
 <p><b>Items:</b> ${o.totalItems || 0}</p>
-<p><b>Total:</b> ₹${o.totalBill || 0}</p>
-<p><b>Date:</b> ${o.orderDate || ""}</p>
-<p><b>Time:</b> ${o.orderTime || ""}</p>
+
+<p><b>Total Bill:</b> ₹${o.totalBill || 0}</p>
+
+<p><b>Date:</b> ${o.orderDate || "-"}</p>
+
+<p><b>Time:</b> ${o.orderTime || "-"}</p>
 
 <p>
 <b>Status:</b>
 <span id="status-${doc.id}">
-${o.status}
+${o.status || "Pending"}
 </span>
 </p>
 
@@ -262,17 +243,21 @@ ${o.status}
 </button>
 
 </div>
+
 `;
 
-
-
 });
+
 document.getElementById("totalOrders").innerText = totalOrders;
 document.getElementById("pendingOrders").innerText = pendingOrders;
 document.getElementById("deliveredOrders").innerText = deliveredOrders;
 document.getElementById("totalSales").innerText = "₹" + totalSales;
+
 document.getElementById("orders").innerHTML = html;
+
 window.changeStatus = async function(orderId,newStatus){
+
+try{
 
 await updateDoc(
 doc(db,"orders",orderId),
@@ -285,59 +270,77 @@ document.getElementById(
 "status-"+orderId
 ).innerText = newStatus;
 
-alert("Status Updated Successfully");
+alert("✅ Status Updated");
+
+}catch(error){
+
+alert(error.message);
+
 }
+
+}
+
 window.deleteOrder = async function(orderId){
 
 try{
 
-console.log("Deleting:", orderId);
-
-if(confirm("Delete this order?")){
+if(!confirm("Delete this order?")) return;
 
 await deleteDoc(
 doc(db,"orders",orderId)
 );
 
-alert("Order Deleted Successfully");
+alert("🗑️ Order Deleted");
 
 location.reload();
 
-}
-
 }catch(error){
 
-alert("Delete Error: " + error.message);
-console.log(error);
+alert("❌ " + error.message);
+
+}
 
 }
 
 let firstLoad = true;
 
-onSnapshot(collection(db,"orders"), (snapshot) => {
+onSnapshot(collection(db,"orders"),()=>{
 
-  if(!firstLoad){
+if(!firstLoad){
 
-    alert("🔔 New Order Received!");
+const audio = new Audio(
+"https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg"
+);
 
-    const audio = new Audio(
-      "https://actions.google.com/sounds/v1/alarms/digital_watch_alarm_long.ogg"
-    );
+audio.play();
 
-    audio.play();
+alert("🔔 New Order Received!");
 
-    location.reload();
+location.reload();
 
-  }
+}
 
-  firstLoad = false;
+firstLoad = false;
 
 });
+
 </script>
+
 <script>
+
 if(localStorage.getItem("adminLoggedIn")!=="true"){
 window.location.href="login.html";
 }
+
+function logout(){
+
+localStorage.removeItem("adminLoggedIn");
+
+window.location.href="login.html";
+
+}
+
 </script>
+
 </body>
 </html>
